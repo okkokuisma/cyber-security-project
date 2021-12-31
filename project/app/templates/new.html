@@ -1,0 +1,8 @@
+<h1>the shittiest aphorism app</h1>
+<a href="/app">front page</a>
+<h2>add a new aphorism</h2>
+<form method="post" action="/app/create">
+  {% csrf_token %}
+  aphorism <input name="aphorism"></input>
+  <button type="submit">add aphorism</button>
+</form>

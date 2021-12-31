@@ -1,0 +1,18 @@
+<h1>the shittiest aphorism app</h1>
+<a href="/app">front page</a>
+<h2>add info</h2>
+<form method="post" action="/app/addinfo">
+  {% csrf_token %}
+  address <input name="address"></input>
+  social security number <input name="sec_number"></input>
+  <button type="submit">add aphorism</button>
+</form>
+{% if user %}
+  <h2>{{ username }}</h2>
+    <ul>
+      <li>{{ user.address | safe }}</li>
+      <li>{{ user.sec_number }}</li>
+    </ul>
+{% else %}
+    <p>No user info found.</p>
+{% endif %}

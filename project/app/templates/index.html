@@ -1,0 +1,13 @@
+<h1>the shittiest aphorism app</h1>
+<a href="/app/new">add a new aphorism</a>
+<a href="/app/userinfo">your very personal info</a>
+<a href="/logout/">log out</a>
+{% if aphorisms %}
+    <ul>
+    {% for a in aphorisms %}
+        <li>{{ a.aphorism_text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No aphorisms are available.</p>
+{% endif %}

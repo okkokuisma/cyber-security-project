@@ -1,0 +1,10 @@
+<h1>Sign up</h1>
+<a href="/login">login</a>
+<form method="post" action="/app/register">
+  {% csrf_token %}
+  {{ form.as_p }}
+  username <input name="username"></input>
+  password <input type="password" name="password"></input>
+  email <input type="email" name="email"></input>
+  <button type="submit">Register</button>
+</form>
