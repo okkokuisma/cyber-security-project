@@ -13,6 +13,7 @@ def index(request):
   context = {'aphorisms': aphorisms}
   return render(request, 'index.html', context)
 
+# @login_required
 def new(request):
   return render(request, 'new.html')
 
@@ -26,6 +27,7 @@ def userinfo(request):
   print(context)
   return render(request, 'user_info.html', context)
 
+# @login_required
 def create(request):
   aphorism = request.POST['aphorism']
   service.create_aphorism(aphorism)
